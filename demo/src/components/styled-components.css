@@ -1,0 +1,19 @@
+.wrap {
+     column-count: 3;
+     column-gap: 1em; 
+}
+.items {
+     display: flex; 
+     justify-content: center; 
+     margin-bottom: 1em; 
+} 
+.figure {
+     display: inline-block; 
+} 
+.figure:hover { 
+    filter: grayscale(0.8); 
+}
+.figure img {
+     width: 100%; 
+}
+
