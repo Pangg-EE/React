@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import '../base.css';
-import  CSRFToken from '../Csrftoken';
+
 const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault(); // 기본 동작 방지

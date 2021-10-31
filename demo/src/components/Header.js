@@ -1,43 +1,56 @@
 import React from 'react'
 import '../base.css';
+import { Link } from 'react-router-dom';
 
-function Header({ title }) {
-
-    return (
+const Header = () => {
+ 
+return (
 <div className="pragmatic_header">
-<div>
-    <h1 className="pragmatic_logo">
-        Pragmatic
-        <h2>{title}</h2>
-    </h1>
-</div>
-<div className="pragmatic_header_navbar">
-    <a  className="pragmatic_header_nav">
-        <span>Articles</span>
-    </a>
-    <a  className="pragmatic_header_nav">
-        <span>Projects</span>
-    </a>
-    <a  className="pragmatic_header_nav">
-        <span>Subscription</span>
-    </a>
+    <div>
+        <h1 className="pragmatic_logo">
+            Pragmatic
+        </h1>
+    </div>
+    <div className="pragmatic_header_navbar">
+        <Link to="/ArticlesList"  className="pragmatic_header_nav">
+            <span>
+                Articles
+            </span>
+        </Link>
 
-    <a className="pragmatic_header_nav">
-        <span>login</span>
-    </a>
-    <a className="pragmatic_header_nav">
-        <span>SignUp</span>
-    </a>
+        <a className="pragmatic_header_nav">
+            <span>
+                Projects
+            </span>
+        </a>
 
-    <a className="pragmatic_header_nav">
-        <span>MyPage</span>
-    </a>
-    <a  className="pragmatic_header_nav">
-        <span>logout</span>
-    </a>
+        <a  className="pragmatic_header_nav">
+            <span>
+                Subscription
+            </span>
+        </a>
+
+        <Link to="/Login"  className="pragmatic_header_nav">
+            <span>
+                login
+            </span>
+        </Link>
+
+        <Link to ="/Sign" className="pragmatic_header_nav">
+            <span>
+                SignUp
+            </span>
+        </Link>
+            
+    </div>
+    <hr
+        style={{
+        borderColor: 'black',
+        marginTop: '2rem',
+        }}
+    />
 </div>
-</div>
-    )
-}
+    )}
 
 export default Header
+

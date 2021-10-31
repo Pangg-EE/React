@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Form, Button,FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import {Form, Button } from "react-bootstrap";
 
 import '../components/styled-components.css';
 
@@ -12,7 +12,7 @@ const ArticleCreate = () => {
     // onChange 이벤트 역할
     const handleFileChange  = (event) => {       
         setSelectedFile(event.target.files[0]);
-        console.log(event.target.files[0])
+        console.log(event.target.files[0]);
         //fd.append("file", event.target.files)
       };
       // formData라는 instance에 담아 보냄
@@ -21,22 +21,15 @@ const ArticleCreate = () => {
 
     formData.append("image", selectedFile, selectedFile.name);//, selectedFile.name
     
-    let variables = [{
-        title: "title",
-        content: "content"
-      }]
-    formData.append("data", new Blob([JSON.stringify(variables)], {type: "application/json"}))
+    // let variables = [{
+    //     title: "title",
+    //     content: "content"
+    //   }]
+    //formData.append("data", new Blob([JSON.stringify(variables)], {type: "application/json"}))
     // formData.append("title", formArticleTitle);
-    formData.append("content", "test post");
+    formData.append("title", "Post Test Title !");
+    formData.append("content", "test post_content");
     formData.append("writer", "12");
-  
-    const config = {
-
-        headers: {
-        
-            'content-type': 'multipart/form-data'           
-        }
-    }
 
     axios.post('/articles/list/', formData)
       .then(res => {
