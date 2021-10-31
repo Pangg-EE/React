@@ -10,14 +10,10 @@ function App() {
 
   return (
     <div className="App">
-      
-      <Routers/>
-      
-      {/* <Header title="name"/> 
-      <Footer/> */}
-      {/* <Button>Boot strap</Button> */}
-    </div>
     
+        <Routers />
+
+    </div>
   );
 }
 
