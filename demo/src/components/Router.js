@@ -11,7 +11,11 @@ import ArticleCreate from "../articleapp/Create";
 import ArticleDetail from "../articleapp/Detail";
 import "bootstrap/dist/css/bootstrap.css";
 
+// 리액트 라우터.
+// 1. npm install react-router-dom
+
 export default () => (
+  // 리액트 라우팅.
   //가장 부모에 BrowserRouter로 감싸 라우터 적용
   <BrowserRouter>
     <Header />

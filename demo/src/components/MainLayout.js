@@ -1,14 +1,12 @@
 // components/Layout/Layout.tsx
-import React from 'react';
-
+import React from "react";
 
 const Layout = () => {
   return (
     <div>
-     <h1>Hi, Welcome. </h1>
+      <h1>Hi, Welcome. </h1>
     </div>
-    
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
