@@ -2,10 +2,13 @@ import React,{ useState } from "react";
 import Counter from './Counter';
 import Info from "./Info";
 import ContextSample from './ContextSample';
+import CounterUseState from "./CounterUseState";
+import InfoUseEffect from "./InfoUseEffect"
+import InputSample from "./InputSample";
 
 const App = () => {
 
-  return <Info />;
+  return <InputSample />;
   //  <div>
   //    <button
   //      onClick={() => {
